@@ -3,46 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet" href="slidebars/slidebars.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/0.9.1/hamburgers.css">
+    <link rel="stylesheet" href="style.css">
+
     <script src="jquery-3.2.1.min.js"></script>
     <script src="slidebars/slidebars.js"></script>
     <script src="galleria/galleria-1.5.7.min.js"></script>
-    
     <script src="jquery.panelSnap.js"></script>
+
     <title>Document</title>
 </head>
 <body>
-   <div id="site" canvas="container">
-    <section>
+   <div id="site" canvas="container" class="container">
+    <section class="panel_one" data-panel="first">
         <div class="grid p1"><!-- Page 1 -->
-            <button id="toggle">toggle</button>
+
+           <ul id="navigation">
+           <li><button id="menubtn1" class="menubtn hamburger hamburger--arrow">
+               <span class="hamburger-box">
+               <span class="hamburger-inner"></span>
+               </span>
+           </button></li>
+           <li><a class="p2link" data-panel="second" href="#">Videos</a></li>
+           <li><a class="p3link" data-panel="third" href="#">Pictures</a></li>
+           <li><a class="p4link" data-panel="fourth" href="#">Links</a></li>
+           </ul>
         </div>
+
     </section>
-    <section>
+    <section class="panel_two" data-panel="second">
         <div class="grid p2"><!-- Page 2 -->
-            
+
+           <ul id="navigation">
+           <li><button id="menubtn2" class="menubtn hamburger hamburger--arrow"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button></li>
+           <li><a class="p1link" data-panel="first" href="#">First Page</a></li>
+           <li><a class="p3link" data-panel="third" href="#">Pictures</a></li>
+           <li><a class="p4link" data-panel="fourth" href="#">Links</a></li>
+           </ul>
+            <div class="galleria">
+                <a href="https://www.youtube.com/watch?v=tBA_ZMpakBU"><img src="img/vid_thumb/keinezeit.PNG"/></a>
+                <a href="https://www.youtube.com/watch?v=e4dctZLURn4"><img src="img/vid_thumb/2017.PNG"/></a>
+                <a href="https://www.youtube.com/watch?v=JCr1VVFzf6I"><img src="img/vid_thumb/suchtfaktor.PNG"/></a>
+            </div>
         </div>
+
     </section>
-    <section>
+    <section class="panel_three"  data-panel="third">
         <div class="grid p3"><!-- Page 3 -->
             
         </div>
     </section>
-    <section>
+    <section class="panel_four"  data-panel="fourth">
         <div class="grid p4"><!-- Page 4 -->
             
         </div>
     </section>
     </div>
-    <div off-canvas="id-1 left reveal">
-<!--        Menu Navigation Slidebar      -->
-   <a href=""><h1>site 1</h1></a>
-   <a href=""><h1>site 2</h1></a>
-   <a href=""><h1>site 3</h1></a>
-   <a href=""><h1>site 4</h1></a>
+    <div off-canvas="id-1 left push">
+    <!--  Menu Navigation Slidebar  -->
+       <ul class="sidenav">
+        <li><a href="#" class="p1link" data-panel="first"><h1>First Page</h1></a></li>
+        <li><a href="#" class="p2link" data-panel="second"><h1>Videos</h1></a></li>
+        <li><a href="#" class="p3link" data-panel="third"><h1>Pictures</h1></a></li>
+        <li><a href="#" class="p4link" data-panel="fourth"><h1>Links</h1></a></li>
+        </ul>
     </div>
 </body>
-
 <script src="script.js"></script>
 </html>
