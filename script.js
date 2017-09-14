@@ -65,6 +65,10 @@ $("#menubtn4").on( 'click', function () {controller.toggle('id-1')});
 //
 //    $('.panel_container').panelSnap(options);
 //  });
+$('.p1link').on('click', function() {
+  var $target = $('.panel_one');
+  $('.container').panelSnap('snapToPanel', $target);
+});
 
 $('.p2link').on('click', function() {
   var $target = $('.panel_two');

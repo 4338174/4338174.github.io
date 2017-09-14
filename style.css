@@ -2,36 +2,24 @@
 @import url('https://fonts.googleapis.com/css?family=Rokkitt:100,200,300,400,500,600,700,800,900');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700');
 
-a:link {color: aliceblue;text-decoration: none;}
-a:visited {color: aliceblue;text-decoration: none;}
-a:hover {color: rgba(90, 30, 100, 1);text-decoration: none;}
+a:visited {color: #e83939;text-decoration: none;}
 a:active {color: rgba(69, 21, 119, 0.3);text-decoration: none;}
-
+a, .link {color: #e83939; text-decoration: none;}
+a:hover, .link:hover {color: #ff3838; text-decoration: none;}
 
 body{margin:0; padding:0; overflow: hidden;  font-family: "Josefin Sans"; font-weight: 600; font-size: 2em;}
 
-a,
-.link {
-  color: #ff5252;
-  text-decoration: none;
-}
-
-a:hover,
-.link:hover {
-  color: #ff3838;
-  text-decoration: none;
-}
-
+/*ONE SECTION = ONE PAGE*/
 section {
     margin:0; padding:0;
     width: 100%;
     height:100%;
     background-color: #eee;
-    color: white;
     overflow: hidden;
 }
 section:nth-child(odd) {background-color: #ddd;}
 
+/*GRID LAYOUT*/
 .grid {
     display: grid;
     margin:0; padding:0;
@@ -54,22 +42,34 @@ section:nth-child(odd) {background-color: #ddd;}
     "main main main main main main main main main main main main";}
 
 #site {margin:0; padding:0;}
+
+/*NAVIGATION HEADER*/
 #navigation {grid-area: head; margin:0; padding:0; list-style: none;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
     justify-items: center;
     align-items: center;
-    background-color: aquamarine;
-}
+    background-color: darkblue;
+    grid-template-areas: "burger li2 li3 li4";
+    overflow: hidden;
+    min-height: 40px;
+}#navigation li:first-child{grid-area: burger;}
 .panel_two #navigation {background-color: black; color: white;}
-.panel_three #navigation {background-color: black;}
-.panel_four #navigation {background-color: black;}
+.panel_three #navigation {background-color: blueviolet;}
+.panel_four #navigation {background-color: forestgreen;}
+
+/*BURGERMENU BUTTON*/
 .menubtn {margin:0; padding:0; background: none; border: none;}
 .menubtn:focus {outline:0;}
 .panel_two .hamburger-inner, .panel_two .hamburger-inner::before, .panel_two .hamburger-inner::after {background-color: white;}
+
+/*LEFT SIDE NAVIGATION*/
 .sidenav {list-style: none; color: white;}
 
 .galleria {grid-area: main;}
 
-
+@media only screen and (max-width: 600px) {
+    #navigation {grid-template-areas: "burger burger burger burger";}
+    #navigation li:nth-child(2), #navigation li:nth-child(3), #navigation li:nth-child(4){visibility: hidden; position: absolute;}
+}
