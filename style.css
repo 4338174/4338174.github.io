@@ -7,6 +7,11 @@ a:active {color: rgba(69, 21, 119, 0.3);text-decoration: none;}
 a, .link {color: #e83939; text-decoration: none;}
 a:hover, .link:hover {color: #ff3838; text-decoration: none;}
 
+#navigation a:visited {color: white;text-decoration: none;}
+#navigation a:active {color: rgba(69, 21, 119, 0.3);text-decoration: none;}
+#navigation a, #navigation .link {color: white; text-decoration: none;}
+#navigation a:hover, #navigation .link:hover {color: white; text-decoration: none;}
+
 body{margin:0; padding:0; overflow: hidden;  font-family: "Josefin Sans"; font-weight: 600; font-size: 2em;}
 
 /*ONE SECTION = ONE PAGE*/
@@ -22,6 +27,7 @@ section:nth-child(odd) {background-color: #ddd;}
 /*GRID LAYOUT*/
 .grid {
     display: grid;
+    background-color: #393939;
     margin:0; padding:0;
     height: 100%;
     width: 100%;
@@ -29,7 +35,7 @@ section:nth-child(odd) {background-color: #ddd;}
     grid-template-rows: repeat(12, 1fr);
     grid-template-areas:
     "head head head head head head head head head head head head"
-    "main main main main main main main main main main main main"
+    "titl titl titl titl titl titl titl titl titl titl titl titl"
     "main main main main main main main main main main main main"
     "main main main main main main main main main main main main"
     "main main main main main main main main main main main main"
@@ -41,35 +47,151 @@ section:nth-child(odd) {background-color: #ddd;}
     "main main main main main main main main main main main main"
     "main main main main main main main main main main main main";}
 
+.p4 {grid-template-areas:
+    "head head head head head head head head head head head head"
+    "titl titl titl titl titl titl titl titl titl titl titl titl"
+    "main main main main main main main main main main main main"
+    "main main main main main main main main main main main main"
+    "main main main main main main main main main main main main"
+    "kont kont kont kont kont kont kont kont kont kont kont kont"
+    "kont kont kont kont kont kont kont kont kont kont kont kont"
+    "kont kont kont kont kont kont kont kont kont kont kont kont"
+    "kont kont kont kont kont kont kont kont kont kont kont kont"
+    "kont kont kont kont kont kont kont kont kont kont kont kont"
+    "kont kont kont kont kont kont kont kont kont kont kont kont"
+    "kont kont kont kont kont kont kont kont kont kont kont kont";}
+
 #site {margin:0; padding:0;}
 
+.sitetitle {grid-area: titl; align-self: center; justify-self: stretch; font-size: 22px; font-weight: 900; background-color: #393939; text-align: center; color: aliceblue; vertical-align: center;}
 /*NAVIGATION HEADER*/
 #navigation {grid-area: head; margin:0; padding:0; list-style: none;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr;
     justify-items: center;
     align-items: center;
-    background-color: darkblue;
-    grid-template-areas: "burger li2 li3 li4";
+    background-color: #000060;
+    grid-template-areas: "logo burger li li li";
     overflow: hidden;
-    min-height: 40px;
-}#navigation li:first-child{grid-area: burger;}
+    min-height: 50px;
+    z-index: 2;
+}.burgerbtn{grid-area: burger;}
 .panel_two #navigation {background-color: black; color: white;}
-.panel_three #navigation {background-color: blueviolet;}
-.panel_four #navigation {background-color: forestgreen;}
-
+.panel_three #navigation {background-color: #000060;}
+.panel_four #navigation {background-color: black;}
+.logo {grid-area: logo;}
+.logo a { display: grid; align-items: center; justify-items: center;}
+.logo img {height: 50px;}
+.grid .logo {filter: invert(100%); -webkit-filter: invert(100%);}
+#overskrift {grid-area: main; align-self:flex-end; justify-self: center; color: white; text-align: center; font-family: "Josefin Sans"; font-weight: 300; font-size: 150%;}
 /*BURGERMENU BUTTON*/
 .menubtn {margin:0; padding:0; background: none; border: none;}
 .menubtn:focus {outline:0;}
-.panel_two .hamburger-inner, .panel_two .hamburger-inner::before, .panel_two .hamburger-inner::after {background-color: white;}
-
+.grid .hamburger-inner, .grid .hamburger-inner::before, .grid .hamburger-inner::after {background-color: white;}
+.hamburger {padding:0;}
+#menubtn5 .hamburger-inner, #menubtn5 .hamburger-inner::before, #menubtn5 .hamburger-inner::after {background-color:#676767;}
 /*LEFT SIDE NAVIGATION*/
-.sidenav {list-style: none; color: white;}
+.sidenav {list-style: none; color: white; font-size: 70%;}
 
 .galleria {grid-area: main;}
 
+#p1_bg {grid-area: main; justify-self: center;  height: 100%;}
+
+.p4 ol {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-area: main;
+    justify-items: center;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    background-color: aliceblue;
+}
+.p4 ol li:first-child a {color:#29487d;}
+.p4 ol li:nth-child(2) a {color:#1da1f2;}
+
+#after_submit, #email_validation, #name_validation {
+    display:none;
+}
+
+#contact_form {grid-area: kont; align-items: center; justify-content: center;}
+
+#after_submit{
+    background-color: #c0ffc0;
+    line-height: 31px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    -webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+    grid-area: main;
+    align-items: center;
+    justify-content: center;
+}
+
+label, #after_submit{
+	color: #6c6c6c;
+}
+
+input{
+    line-height: 31px;
+}
+
+input, textarea{
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-color: rgba(255,255,255,.6);
+	border: solid 1px #b6c7cb;
+}
+
+#contact_form{
+	background-color: #e1e9eb;
+	border: solid 1px #e5e5e5;
+    padding: 10px 20px 50px 20px;
+    -webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+    display: grid;
+    justify-items: center;
+}
+
+#submit_button{
+    width: 109px;
+	height: 34px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-color: #86c5fa;
+	-webkit-box-shadow: inset 0 2px rgba(255,255,255,.29);
+	-moz-box-shadow: inset 0 2px rgba(255,255,255,.29);
+	box-shadow: inset 0 2px rgba(255,255,255,.29);
+	border: solid 1px #77a4cb;
+	font-weight: bold;
+	color: #fff;
+    margin-left: 7px;
+}
+
+label.required:after {
+  content:'*';
+  color:red;
+}
+
+.error {
+  background-color:#FFDFDF;
+  color:red;
+}
+.error_message{
+  font-style: italic;
+  font-size: 10px;
+}
+.row {
+  margin:5px;
+}
+
 @media only screen and (max-width: 600px) {
-    #navigation {grid-template-areas: "burger burger burger burger";}
-    #navigation li:nth-child(2), #navigation li:nth-child(3), #navigation li:nth-child(4){visibility: hidden; position: absolute;}
+    #navigation {grid-template-areas: "logo logo burger burger burger";}
+    #navigation li:nth-child(3), #navigation li:nth-child(4), #navigation li:nth-child(5) {visibility: hidden; position: absolute;}
 }

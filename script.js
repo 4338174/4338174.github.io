@@ -35,6 +35,7 @@ $("#menubtn1").on( 'click', function () {controller.toggle('id-1')});
 $("#menubtn2").on( 'click', function () {controller.toggle('id-1')});
 $("#menubtn3").on( 'click', function () {controller.toggle('id-1')});
 $("#menubtn4").on( 'click', function () {controller.toggle('id-1')});
+$("#menubtn5").on( 'click', function () {controller.toggle('id-1')});
 //var page2 = () => {$('.container').panelSnap('snapToPanel', $('.panel_two'))}
 //Scroll snap Options
 //  jQuery(function($) {
