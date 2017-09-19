@@ -14,7 +14,7 @@
 ### opdateret arbejdsplan:
 | timer         | opgave        | Tools |
 |:-------------:|:-------------:|:-----:|
-| -             | layout        | Ai/Ps |
+| 3             | layout        | Ai    |
 <!--
 | -             | wireframe     | Ai    |
 | -             | dummy HTML    |Brackets|
@@ -22,3 +22,7 @@
 | -             | modules til dataudtræk|VSCode|
 | -             | Opsæt server og routes|VSCode|
 -->
+
+![alt text](Layout_Forside.png "Forside Layout")
+![alt text](Layout_Produktside.png "Produktside Layout")
+![alt text](Layout_Kontaktside.png "Kontaktside Layout")
