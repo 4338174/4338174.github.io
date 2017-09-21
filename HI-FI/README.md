@@ -23,6 +23,6 @@
 | -             | Opsæt server og routes|VSCode|
 -->
 
-![alt text](Layout_Forside.png "Forside Layout")
-![alt text](Layout_Produktside.png "Produktside Layout")
-![alt text](Layout_Kontaktside.png "Kontaktside Layout")
+![alt text](layout/Layout_Forside.png "Forside Layout")
+![alt text](layout/Layout_Produktside.png "Produktside Layout")
+![alt text](layout/Layout_Kontaktside.png "Kontaktside Layout")
