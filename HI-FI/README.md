@@ -8,8 +8,8 @@
 | 2             | wireframe     | Ai    |
 | 0.5           | dummy HTML/CSS|Brackets|
 | 1           | dummy Database|XAMPP/mySQL|
-| 0.5           | modules til dataudtræk|VSCode|
-| 0.5           | Opsæt server og routes|VSCode|
+| 0.5           | modules til dataudtræk|Brackets|
+| 0.5           | Opsæt server og routes|Brackets|
 
 ### opdateret arbejdsplan:
 | timer         | opgave        | Tools |
@@ -17,8 +17,8 @@
 | 3             | layout        | Ai    |
 | 5             | dummy HTML/CSS|Brackets|
 | 0.5           | dummy Database|XAMPP/mySQL|
-| -             | modules til dataudtræk|VSCode|
-| -             | Opsæt server og routes|VSCode|
+| -             | modules til dataudtræk|Brackets|
+| -             | Opsæt server og routes|Brackets|
 
 ## Layouts
 ![alt text](layout/Layout_Forside.png "Forside Layout")
