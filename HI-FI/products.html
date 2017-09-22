@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <script src="script.js"></script>
 </head>
-<body>
+<body id="produktside">
     <article class="grid">
         <div class="wire" id="leftwire"></div>
         <div class="wire" id="rightwire"></div>
@@ -72,13 +72,16 @@
         <strong>
         <form id="product-options" action="#">
         <div class="product-categorie">
-            <label>Kategorie:
-                <select name="categorie">
-                    <option>cd afspillere</option>
-                    <option>dvd afspillere</option>
-                    <option>effektforstaerkere</option>
-                    <option>forforstaerkere</option>
-                    <option>hojtalere</option><option>int forstaerkere</option><option>pladespillere</option><option>roer forstaerkere</option>
+            <label>Kategori:
+                <select id="whichcategory" name="categorie" onchange="selectkategori()">
+                   <option value="">All</option>
+                    <option value="cd_a">CD Afspiller</option>
+                    <option value="dvd_a">DVD Afspiller</option>
+                    <option value="eff_for">Effektforstærker</option>
+                    <option value="for_for">Forforstaerker</option>
+                    <option value="hoej">Højtaler</option>
+                    <option value="int_for">Int. Forstærker</option><option value="plade">Pladespiller</option>
+                    <option value="roer_for">Rør Forstærker</option>
                 </select>
             </label>
 
@@ -100,6 +103,7 @@
 
     </div>
     <div id="products" class="row list-group">
+<!--
         <div class="item  col-xs-4 col-lg-4 list-group-item">
             <div class="thumbnail">
                 <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
@@ -226,6 +230,7 @@
                 </div>
             </div>
         </div>
+-->
     </div>
 </div>
 <!--X BOOTSTRAP SNIPPET https://bootsnipp.com/snippets/featured/list-grid-view X-->
