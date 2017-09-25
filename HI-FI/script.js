@@ -9,8 +9,8 @@ var fetchproducts = (kategori) => {
         var index = () => {
             var content = document.getElementsByClassName('products');
             content.innerHTML = '';
-            for (var i = 0; i < 5; i++){
-                content[0].innerHTML += '<div class="prod"><img src="img/products/'+ data[i].fk_kategori + 'e/' + data[i].image + '" alt=""/></div>';
+            for (var i = 0; i < 6; i++){
+                content[0].innerHTML += '<div class="prod"><img src="img/products/'+ data[i].fk_kategori + 'e/' + data[i].image + '" alt=""/><h2>' + data[i].navn + '</h2></div>';
             }
         }
         
