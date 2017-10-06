@@ -14,7 +14,7 @@ module.exports = function (app) {
         })
     });
     app.get('/produkt/id/:id', function (req, res) {
-        db.query(allproducts + ' where produkter.id = ?', function (err, data) {
+        db.query(allproducts + ' where produkter.id = ?', [req.params.id], function (err, data) {
             res.send(data);
         })
     });
@@ -55,6 +55,11 @@ module.exports = function (app) {
     });
     app.get('/produkt/roer_for', function (req, res) {
         db.query(allproducts + ' where produkter.fk_kategori = 8', function (err, data) {
+            res.send(data);
+        })
+    });
+    app.get('/produkt/search/:search', function (req, res) {
+        db.query(allproducts + ` where produkter.navn like '%${req.params.search}%'`, function (err, data) {
             res.send(data);
         })
     });
