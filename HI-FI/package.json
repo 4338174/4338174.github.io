@@ -1,0 +1,17 @@
+{
+  "name": "hifi",
+  "version": "1.0.0",
+  "description": "| timer         | opgave        | Tools |\r |:-------------:|:-------------:|:-----:|\r | 2             | layout        | Ai/Ps |\r | 2             | wireframe     | Ai    |\r | 0.5           | dummy HTML/CSS|Brackets|\r | 1             | dummy Database|XAMPP/mySQL|\r | 0.5           | Opsæt server og routes|Brackets|\r | 0.5           | modules til dataudtræk|Brackets|",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.18.13"
+  }
+}

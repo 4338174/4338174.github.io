@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>HI-FI Shop</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="hifi_api\node_modules\fitty\dist\fitty.min.js"></script>
+    <link rel="stylesheet" href="plugins/parsley.js/parsley.css">
+    <link rel="stylesheet" href="assets/style.css">
+    
+</head>
+<body class="admin">
+    <article class="grid">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html"><span class="underline">HI-FI Shop</span></a>
+              <a href="index.html"><i class="fa fa-unlock" aria-hidden="true"></i></a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="">Contact</a></li>
+                <li id="search-grid">
+                <input class="search-text" id="search-bar" type="text" name="fname" list="searchwords">
+                    <datalist id="searchwords">
+                    </datalist>
+               <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-search"></span>Search</a>
+                </li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </nav>
+
+
+        <div class="text">
+          <h2 class="bg-primary">Add a new product</h2>
+            <div>
+              <label for="navn">Produkt navn:</label>
+              <input name="navn" id="navn">
+            </div>
+            <div>
+              <label for="pris">Produkt pris:</label>
+              <input name="pris" id="pris">
+            </div>
+            <div>
+              <label for="kategori">Produkt kategori:</label>
+              <input name="kategori" id="kategori">
+            </div>
+            <div>
+              <label for="producent">Produkt producent:</label>
+              <input name="producent" id="producent">
+            </div>
+            <div>
+              <label for="image">Produkt image:</label>
+              <input name="image" id="image" type="file">
+            </div>
+            <button id="submit">Submit!</button>
+            <ul id="sortable">
+              <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Produkt 2</li>
+              <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Produkt 1</li>
+            </ul>
+        </div>
+
+
+<!--BOOTSTRAP SNIPPET https://bootsnipp.com/snippets/featured/list-grid-view-->
+              <div class="col-md-offset-4 col-md-4" id="box">
+              </div>
+<!--X BOOTSTRAP SNIPPET https://bootsnipp.com/snippets/featured/list-grid-view X-->
+
+       <div class="container" id="product_view">
+
+        </div>
+
+        <div class="info">
+
+        </div>
+
+        <article class="footer">
+            <span id="glyph">
+            <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </span>
+            <span id="foot_link">
+                <span><a href="">Impressum</a></span>
+                <span><a href="">Kontakt</a></span>
+            </span>
+        </article>
+
+    </article>
+</body>
+<script src="assets/script.js"></script>
+<script src="assets/admin.js"></script>
+</html>
